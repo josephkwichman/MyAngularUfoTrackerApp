@@ -1,0 +1,34 @@
+<mat-table [dataSource]="this.sightings" class="mat-elevation-z8">
+    <!-- Id Number Column -->
+    <ng-container matColumnDef="sightingId">
+      <mat-header-cell *matHeaderCellDef> Id No. </mat-header-cell>
+      <mat-cell *matCellDef="let sighting"> {{ sighting.sightingId }} </mat-cell>
+    </ng-container>
+  
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+      <mat-cell *matCellDef="let sighting"> {{ sighting.date | date }} </mat-cell>
+    </ng-container>
+  
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+      <mat-cell *matCellDef="let sighting"> {{ sighting.description }} </mat-cell>
+    </ng-container>
+  
+    <!-- Latitude Column -->
+    <ng-container matColumnDef="lat">
+      <mat-header-cell *matHeaderCellDef> Lat </mat-header-cell>
+      <mat-cell *matCellDef="let sighting"> {{ sighting.lat }} </mat-cell>
+    </ng-container>
+
+    <!-- Longitude Column -->
+    <ng-container matColumnDef="long">
+        <mat-header-cell *matHeaderCellDef> Long </mat-header-cell>
+        <mat-cell *matCellDef="let sighting"> {{ sighting.long }} </mat-cell>
+      </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>

@@ -1,0 +1,30 @@
+<div>
+    <mat-grid-list cols="3">
+      <mat-grid-tile *ngFor="let sighting of sightings">
+        <mat-card class="example-card">
+          <mat-card-title></mat-card-title>
+          <img mat-card-image src="https://image.flaticon.com/icons/svg/2285/2285721.svg" width="130" height="130"
+            alt="Ufo free icon" title="Ufo free icon" alt="Flying Saucer Icon">
+          <mat-card-header>
+            <mat-card-title>
+              <h2>Id: {{sighting.sightingId}}</h2>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <h2>Date: {{sighting.date | date:'short'}}</h2>
+            </mat-card-subtitle>
+            <mat-card-subtitle>
+              <h2>Description: {{sighting.description}}</h2>
+            </mat-card-subtitle>
+            <mat-card-subtitle>
+              <h2>Lat: {{sighting.lat}}</h2>
+            </mat-card-subtitle>
+            <mat-card-subtitle>
+              <h2>Long: {{sighting.long}}</h2>
+            </mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+   

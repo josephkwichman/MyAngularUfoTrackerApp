@@ -1,0 +1,15 @@
+.example-card {
+    max-width: 2500px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  mat-grid-tile {
+    background: rgb(242, 242, 250);
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    justify-content: initial;
+  }
+
+  
